@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HashForge Security Toolkit</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔐 HashForge Security Toolkit</h1>
+
+<!-- Text / Hash Input -->
+
+<label for="inputText">Input</label>
+<textarea id="inputText" placeholder="Enter text or hash"></textarea>
+
+<!-- Algorithm Selection -->
+
+<label for="algorithm">Select Algorithm / Operation</label>
+<select id="algorithm">
+
+<option value="md5">MD5</option>
+<option value="sha1">SHA1</option>
+<option value="sha256">SHA256</option>
+<option value="sha512">SHA512</option>
+
+<option value="base64_encode">Base64 Encode</option>
+<option value="base64_decode">Base64 Decode</option>
+
+<option value="hex_encode">Hex Encode</option>
+<option value="hex_decode">Hex Decode</option>
+
+</select>
+
+<!-- Action Buttons -->
+
+<div class="buttons">
+
+<button onclick="generateHash()">Generate / Encode</button>
+
+<button onclick="crackHash()">Crack Hash</button>
+
+<button onclick="autoCrack()">Auto Detect + Crack</button>
+
+</div>
+
+<h3>Result</h3>
+
+<div id="result"></div>
+
+<hr>
+
+<!-- File Hashing -->
+
+<h3>📂 File Hashing</h3>
+
+<label for="fileInput">Upload File</label>
+<input type="file" id="fileInput">
+
+<button onclick="hashFile()">Generate File Hash</button>
+
+<div id="fileResult"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
